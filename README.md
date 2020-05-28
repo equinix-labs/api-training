@@ -1,5 +1,5 @@
-# Demo for Packet 2020 SKO
-This repo will help you deploy a Packet server via Terraform for the first time on a windows machine or a Mac. (Linux folks you can figure this out...)
+# Packet API training using Terraform
+This repo will help you deploy a Packet server via Terraform for the first time on a windows machine or a Mac. (Linux folks should be able to figure out the delta between Mac and Linux...)
 
 ## Downloads
 Download the following items for your respective OS
@@ -19,7 +19,6 @@ If you are using a Mac you'll need fewer files:
   * [terraform.tfvars](https://raw.githubusercontent.com/packet-labs/api-training/master/terraform.tfvars)
   * [terraform](https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_darwin_amd64.zip) ****Requires being unzipped***
 
-
 ## Data gathering
 
 ### API Key
@@ -28,10 +27,8 @@ Login to the Packet UI and click on your picture at the top right corner and cho
 ### Project ID
 Login to the Packet UI and navigate to the ***Project*** you want to deploy your server into. Once on that project choose ***PROJECT SETTINGS*** at the top of page. On this page you will see a Project ID that looks similar to ***25bc4342-0a9b-4481-b7ca-76e87f5a85be***. Copy this for later.
 
-
 ## Update your terraform.tfvars
 Use the ***API Key*** and the ***Project ID*** gathered in the previous steps, as well as a ***DNS Friendly Name*** (No space, Capitals, or Symbols). Then update these values in your ***terraform.tfvars*** file.
-
 
 ## Deploy your plan
 Doing this will be different per OS, please follow the instructions for your OS.
@@ -94,9 +91,7 @@ Now click ***Open***. (You will be prompted to confirm you know this server. Cli
 
 Lastly type in your username ***root*** and press ***enter***.
 
-
 Done!
-
 
 ### Mac
 On a Mac connection to a linux server is extreamly easy. All you will have to do is record the ***IP_Address*** from the Terraform output once the plan is done running. And use that IP address in the following command:
