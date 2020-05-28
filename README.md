@@ -15,7 +15,7 @@ If you have a windows machine you need to create a folder that has a file struct
 ### Mac
 If you are using a Mac you'll need fewer files:
 * Folder_Name
-  * [main.tf](https://raw.githubusercontent.com/c0dyhi11/packet-sko-2020/master/my_plan.tf)
+  * [main.tf](https://raw.githubusercontent.com/packet-labs/api-training/master/main.tf)
   * [terraform.tfvars](https://raw.githubusercontent.com/packet-labs/api-training/master/terraform.tfvars)
   * [terraform](https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_darwin_amd64.zip) ****Requires being unzipped***
 
