@@ -1,8 +1,13 @@
-# Packet API training using Terraform
-This repo will help you deploy a Packet server via Terraform for the first time on a windows machine or a Mac. (Linux folks should be able to figure out the delta between Mac and Linux...)
+![](https://img.shields.io/badge/Stability-Experimental-red.svg)
+
+# Equinix Metal API training using Terraform
+This repo will help you deploy a Equinix Metal server via Terraform for the first time on a windows machine or a Mac. 
+
+This repository is [Experimental](https://github.com/packethost/standards/blob/master/experimental-statement.md) meaning that it's based on untested ideas or techniques and not yet established or finalized or involves a radically new and innovative style! This means that support is best effort (at best!) and we strongly encourage you to NOT use this in production.
 
 ## Downloads
 Download the following items for your respective OS
+
 ### Windows
 If you have a windows machine you need to create a folder that has a file structure similar to this:
 * Folder_Name
@@ -22,10 +27,10 @@ If you are using a Mac you'll need fewer files:
 ## Data gathering
 
 ### API Key
-Login to the Packet UI and click on your picture at the top right corner and choose ***API Keys.*** If you already have an API Key with Read/Write permissions, copy the ***token***. If you need one click the green ***+Add*** in the top right. Then give it a ***Description*** and ensure the permissions are ***Read/Write***. Once that is created, copy the ***token*** for later.
+Login to the Equinix Metal UI and click on your picture at the top right corner and choose ***API Keys.*** If you already have an API Key with Read/Write permissions, copy the ***token***. If you need one click the green ***+Add*** in the top right. Then give it a ***Description*** and ensure the permissions are ***Read/Write***. Once that is created, copy the ***token*** for later.
 
 ### Project ID
-Login to the Packet UI and navigate to the ***Project*** you want to deploy your server into. Once on that project choose ***PROJECT SETTINGS*** at the top of page. On this page you will see a Project ID that looks similar to ***25bc4342-0a9b-4481-b7ca-76e87f5a85be***. Copy this for later.
+Login to the Equinix Metal UI and navigate to the ***Project*** you want to deploy your server into. Once on that project choose ***PROJECT SETTINGS*** at the top of page. On this page you will see a Project ID that looks similar to ***25bc4342-0a9b-4481-b7ca-76e87f5a85be***. Copy this for later.
 
 ## Update your terraform.tfvars
 Use the ***API Key*** and the ***Project ID*** gathered in the previous steps, as well as a ***DNS Friendly Name*** (No space, Capitals, or Symbols). Then update these values in your ***terraform.tfvars*** file.
@@ -94,7 +99,7 @@ Lastly type in your username ***root*** and press ***enter***.
 Done!
 
 ### Mac
-On a Mac connection to a linux server is extreamly easy. All you will have to do is record the ***IP_Address*** from the Terraform output once the plan is done running. And use that IP address in the following command:
+On a Mac connection to a linux server is simpler. Record the ***IP_Address*** from the Terraform output once the plan is done running. And use that IP address in the following command:
 ```bash
 ssh -i my_tf_ssh_key root@<terraform_ip_address>
 ```
